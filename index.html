@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>File Upload and Display Handling</title>
+</head>
+<body>
+    <div id="step1" class="box">
+        <h3>Step 1: Select File</h3>
+        <form>
+            <label for="fileInput">Choose File:</label>
+            <input type="file" id="fileInput" accept=".csv, .json">
+            <p>Supported file types: CSV, .json</p>
+        </form>
+    </div>
+
+    <div id="step2" class="box">
+        <h3>Step 2: Specify Format</h3>
+        <form>
+            <label for="fileType">File Type:</label>
+            <select id="fileType">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+            <br>
+            <label for="encoding">Character Encoding:</label>
+            <select id="encoding">
+                <option value="utf8">UTF-8</option>
+                <option value="utf16">UTF-16</option>
+            </select>
+            <br>
+            <label for="delimiter">Delimiter:</label>
+            <input type="text" id="delimiter" value="comma">
+            <br>
+            <label for="hasHeader">Has Header:</label>
+            <input type="checkbox" id="hasHeader" checked>
+        </form>
+    </div>
+
+    <div id="step3" class="box">
+        <h3>Step 3: Display Handling</h3>
+        <div>
+            <label for="field1">Box 1:</label>
+            <select id="field1">
+                <!-- Add options as needed -->
+            </select>
+            <label for="field2">Box 2:</label>
+            <select id="field2">
+                <!-- Add options as needed -->
+            </select>
+        </div>
+        <div>
+            <label for="field3">Box 3:</label>
+            <select id="field3">
+                <!-- Add options as needed -->
+            </select>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
